@@ -1,0 +1,375 @@
+#include <iostream>
+#include <iomanip> // setw()
+using namespace std;
+
+int main()
+{
+    setlocale(0, "");
+    int num1;
+    char num2;
+    int num3;
+    int num4;
+    int num5;
+    int i = 1;
+    int massInt[10] = { 1, 20, 32, 4, 1, 2, 2, 54, 23, 0 };
+    short massShort[10] = { 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 };
+    long massLong[10] = { 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000 };
+    float massFloat[10] = { 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9, 10.1 };
+    double massDouble[10] = { 1.234, 2.345, 3.456, 4.567, 5.678, 6.789, 7.890, 8.901, 9.012, 10.123 };
+    char massChar[10] = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j' };
+    bool massBool[10] = { true, false, true, false, true, false, true, false, true, false };
+    const int SIZE = 9;
+    int table[SIZE][SIZE];
+    const int VVERH = 3;
+    const int VBOK = 3;
+    int matrix[VVERH][VBOK];
+    cout << "[1]Работа с фигурами" << endl;
+    cout << "[2]Работа с одномерным массивом." << endl;
+    cout << "[3]Работа с многомерными массивами." << endl;
+    cout << "[4]Выход" << endl;
+    cout << "" << endl;
+    cout << "Введите нужное вам задание:";
+    cin >> num1;
+    system("cls");
+    switch (num1)
+    {
+    case 1:
+
+        cout << "[1]Работа с линией" << endl;
+        cout << "[2]Работа с квадратом" << endl;
+        cout << "[3]Работа с прямоугольником" << endl;
+        cout << "[4]Работа с треугольником" << endl;
+        cout << "" << endl;
+        cout << "Введите нужную вам фигуру:";
+        cin >> num1;
+        system("cls");
+
+        switch (num1)
+        {
+        case 1:
+
+
+            cout << "Введите символ : ";
+            cin >> num2;
+
+            do {
+                cout << "Введите количество символов : ";
+                cin >> num1;
+                if (num1 < 0) {
+                    cout << "Вы ввели неккоректные данные" << endl;
+                }
+            } while (num1 < 0);
+            cout << "\nДля того, чтоб построить горизонтальную линию из символов нажмите 1 \nДля того, чтоб построить вертикальную линию из символов нажмите 2\n\nВыберите вариант : ";
+            cin >> num3;
+            while (i <= num1)
+            {
+                switch (num3)
+                {
+                case 1:
+                    cout << num2;
+                    i++;
+                    break;
+                case 2:
+                    cout << num2 << "\n";
+                    i++;
+                    break;
+                }
+            }
+            cout << "\n\n\n";
+            break;
+        case 2:
+            cout << "[1]Полый квадрат" << endl;
+            cout << "[2]Заполненный квадрат" << endl;
+            cout << "" << endl;
+            cout << "Введите нужный вам квадрат:" << endl;
+            cin >> num1;
+            system("cls");
+            switch (num1)
+            {
+            case 1:
+                do
+                {
+                    cout << "Выберите размер квадрата: ";
+                    cin >> num1;
+                    if (num1 < 0)
+                    {
+                        cout << "Вы ввели неккоректные данные" << endl;
+                    }
+                } while (num1 < 0);
+                cout << "Выберите символ, из которых будет квадрат: ";
+                cin >> num2;
+                system("cls");
+                for (int i = 1; i <= num1; i++)
+                {
+                    for (int j = 1; j <= num1; j++)
+                        if (i == 1 || i == num1 || j == 1 || j == num1) {
+                            cout << num2 << " ";
+                        }
+                        else {
+                            cout << "  ";
+                        }
+                    cout << endl;
+
+                }
+                break;
+            case 2:
+                do
+                {
+                    cout << "Выберите размер квадрата: ";
+                    cin >> num1;
+                    if (num1 < 0)
+                    {
+                        cout << "Вы ввели неккоректные данные" << endl;
+                    }
+                } while (num1 < 0);
+                cout << "Выберите символ, из которых будет фигура: ";
+                cin >> num2;
+                system("cls");
+                for (int i = 0; i < num1; ++i)
+                {
+                    for (int j = 0; j < num1; ++j)
+                        cout << num2 << " ";
+
+                    cout << endl;
+
+                }
+                break;
+            }
+            break;
+        case 3:
+            cout << "Прямоугольник" << endl;
+            cout << "[1] Полый" << endl;
+            cout << "[2] Заполненный" << endl;
+            cout << "Выберите тип прямоугольника:";
+            cin >> num3;
+            system("cls");
+            switch (num3)
+            {
+            case 1:
+                do
+                {
+                    cout << "Выберите размер квадрата: ";
+                    cin >> num4;
+                    if (num4 < 0)
+                    {
+                        cout << "Вы ввели неккоректные данные" << endl;
+                    }
+                } while (num4 < 0);
+                do
+                {
+                    cout << "Выберите размер квадрата: ";
+                    cin >> num5;
+                    if (num5 < 0)
+                    {
+                        cout << "Вы ввели неккоректные данные" << endl;
+                    }
+                } while (num5 < 0);
+                cout << "Выберите символ, из которых будет фигура: ";
+                cin >> num2;
+                system("cls");
+                for (int i = 0; i < num4; i++)
+                {
+                    for (int j = 0; j < num5; j++)
+                    {
+                        if ((j == 0) || (j == num5 - 1) || (i == 0) || (i == num4 - 1))
+                            cout << num2 << " ";
+                        else
+                        {
+                            cout << " " << " ";
+                        }
+                    }
+                    cout << endl;
+                }
+
+                break;
+            case 2:
+                cout << "Выберите одну сторону прямоугольника: ";
+                cin >> num4;
+                cout << "Выберите вторую сторону прямоугольника: ";
+                cin >> num5;
+                cout << "Выберите символ, из которых будет фигура: ";
+                cin >> num2;
+                system("cls");
+                for (int i = 0; i < num4; ++i)
+                {
+                    for (int j = 0; j < num5; ++j)
+                        cout << num2 << " ";
+
+                    cout << endl;
+                }
+                break;
+            default:
+                break;
+
+            }
+            break;
+
+        case 4:
+            cout << "Треугольник" << endl;
+            cout << "[1] Полый" << endl;
+            cout << "[2] Заполненный" << endl;
+            cout << "Выберите тип треугольника: ";
+            cin >> num1;
+            system("cls");
+            switch (num1)
+            {
+            case 1:
+                cout << "Выберите высоту треугольника: ";
+                cin >> num3;
+                cout << "Выберите символ, из которых будет фигура: ";
+                cin >> num2;
+                system("cls");
+                for (int i = 1; i <= num3; i++) {
+                    for (int j = 1; j <= num3 * 2; j++) {
+                        if (j == ((num3 + 1) - (i - 1)) || j == ((num3 + 1) + (i - 1))) {
+                            cout << num2;
+                        }
+                        else
+                            if (i == num3 && j > 1) {
+                                cout << num2;
+                            }
+                            else {
+                                cout << " ";
+                            }
+                    }
+                    cout << endl;
+                }
+                break;
+            case 2:
+                cout << "Выберите высоту треугольника: ";
+                cin >> num3;
+                cout << "Выберите символ, из которых будет фигура: ";
+                cin >> num2;
+                system("cls");
+                for (int i = 0; i < num3; i++)
+                {
+                    for (int j = 1; j < num3 - i; j++)
+                    {
+                        cout << ' ';
+                    }
+
+                    for (int j = num3 - 2 * i; j <= num3; j++)
+                    {
+                        cout << num2;
+                    }
+                    cout << endl;
+
+                }
+                break;
+            }
+
+            break;
+        }
+        break;
+    case 2:
+        cout << "[ + ] Массив INT:" << endl;
+        for (int i = 0; i < 10; i++) {
+            cout << "[ + ] massInt[" << i << "] = " << massInt[i] << endl;
+        }
+
+        cout << endl;
+
+        cout << "[ + ] Массив SHORT:" << endl;
+        for (int i = 0; i < 10; i++) {
+            cout << "[ + ] massShort[" << i << "] = " << massShort[i] << endl;
+        }
+
+        cout << endl;
+
+        cout << "[ + ] Массив LONG:" << endl;
+        for (int i = 0; i < 10; i++) {
+            cout << "[ + ] massLong[" << i << "] = " << massLong[i] << endl;
+        }
+
+        cout << endl;
+
+        cout << "[ + ] Массив FLOAT:" << endl;
+        for (int i = 0; i < 10; i++) {
+            cout << "[ + ] massFloat[" << i << "] = " << massFloat[i] << endl;
+        }
+
+        cout << endl;
+
+        cout << "[ + ] Массив DOUBLE:" << endl;
+        for (int i = 0; i < 10; i++) {
+            cout << "[ + ] massDouble[" << i << "] = " << massDouble[i] << endl;
+        }
+
+        cout << endl;
+
+        cout << "[ + ] Массив CHAR:" << endl;
+        for (int i = 0; i < 10; i++) {
+            cout << "[ + ] massChar[" << i << "] = " << massChar[i] << endl;
+        }
+
+        cout << endl;
+
+        cout << "[ + ] Массив BOOL:" << endl;
+        for (int i = 0; i < 10; i++) {
+            cout << "[ + ] massBool[" << i << "] = " << massBool[i] << endl;
+        }
+        break;
+    case 3:
+        cout << "[1]Таблица умножения" << endl;
+        cout << "[2]Сумма которую заполняет массив " << endl;
+        cout << "" << endl;
+        cout << "Выберите нужный вам пункт:";
+        cin >> num1;
+        switch (num1)
+        {
+        case 1:
+            for (int i = 0; i < SIZE; ++i) {
+                for (int j = 0; j < SIZE; ++j) {
+                    table[i][j] = (i + 1) * (j + 1);
+                }
+            }
+
+            // вывод таблицы умножения
+            for (int i = 0; i < SIZE; ++i) {
+                for (int j = 0; j < SIZE; ++j) {
+                    cout << setw(4) << table[i][j];
+                }
+                cout << endl;
+            }
+            break;
+        case 2:
+            for (int i = 0; i < VVERH; ++i) {
+                for (int j = 0; j < VBOK; ++j) {
+                    cout << "Введите значение для элемента (" << i + 1 << ", " << j + 1 << "): ";
+                    cin >> matrix[i][j];
+                }
+            }
+
+            // вывод заполненной матрицы
+            for (int i = 0; i < VVERH; ++i) {
+                for (int j = 0; j < VBOK; ++j) {
+                    cout << setw(3) << matrix[i][j] << " ";
+                }
+                cout << endl;
+            }
+
+            for (int j = 0; j < VBOK; ++j) {
+                int sum = 0;
+                for (int i = 0; i < VVERH; ++i) {
+                    sum += matrix[i][j];
+                }
+                cout << "Сумма элементов столбца " << j + 1 << ": " << sum << endl;
+            }
+
+            for (int i = 0; i < VVERH; ++i) {
+                int sum = 0;
+                for (int j = 0; j < VBOK; ++j) {
+                    sum += matrix[i][j];
+                }
+                cout << "Сумма элементов строки " << i + 1 << ": " << sum << endl;
+            }
+            break;
+        }
+    case 4:
+        cout << "Гудбай,возвращайтесь к нам еще" << endl;
+        return 0;
+    default:
+        cout << "Вы ввели некорректные данные" << endl;
+        break;
+    }
+}
