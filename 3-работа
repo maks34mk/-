@@ -1,0 +1,172 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    setlocale(0, "");
+
+    int vor;
+
+    cout << "[1] Русский язык " << endl;                                 
+    cout << "[2] Английкий язык" << endl << endl;
+    cout << "[3] Выход" << endl;
+    cin >> vor;
+    system("cls");
+
+    switch (vor)
+    {
+    case 1:
+        cout << "Русские слова:" << endl;                      
+        cout << "[1] Привет" << endl;
+        cout << "[2] Мир" << endl;
+        cout << "[3] Слово" << endl;
+        cout << "[4] Дорога" << endl;
+        cout << "[5] Мяч" << endl;
+        cout << "[6] Нога" << endl;
+        cout << "[7] Компьютер " << endl;
+        cout << "[8] Стол " << endl;
+        cout << "[9] Рабочий стол " << endl;
+        cout << "[10] Огонь" << endl;
+        cout << "[11] Солнце " << endl;
+        cout << "[12] Вода" << endl;
+        cout << "[13] Земля" << endl;
+        cout << "[14] Воздух" << endl;
+        cout << "[15] Машина" << endl << endl;
+        cout << "Введите номер слова: " << endl;
+        cin >> vor;
+        system("cls");
+        switch (vor) {                                     
+        case 1:
+            cout << "Перевод: Привет -> Hello";
+            break;
+        case 2:
+            cout << "Перевод: Мир -> World";
+            break;
+        case 3:
+            cout << "Перевод: Слова -> Word";
+            break;
+        case 4:
+            cout << "Перевод: Дорога -> Road";
+            break;
+        case 5:
+            cout << "Перевод: Мяч -> Ball";
+            break;
+        case 6:
+            cout << "Перевод: Нога -> Leg";
+            break;
+        case 7:
+            cout << "Перевод: Компьютер -> Computer";
+            break;
+        case 8:
+            cout << "Перевод: Стол -> Table";
+            break;
+        case 9:
+            cout << "Перевод: Рабочий стол -> Desktop";
+            break;
+        case 10:
+            cout << "Перевод: Огонь -> Fire";
+            break;
+        case 11:
+            cout << "Перевод: Солнце -> Sun";
+            break;
+        case 12:
+            cout << "Перевод: Вода -> Water";
+            break;
+        case 13:
+            cout << "Перевод: Земля -> Earth";
+            break;
+        case 14:
+            cout << "Перевод: Воздух -> Air";
+            break;
+        case 15:
+            cout << "Перевод: Машина -> Machine";
+        default:
+            cout << "Вы ввели неккоректный номер, выберите номер из списка! ";
+            break;
+        }
+        break;
+    case 2:
+        cout << "Английский язык" << endl;               
+        cout << "[1] Hello" << endl;
+        cout << "[2] World" << endl;
+        cout << "[3] Word" << endl;
+        cout << "[4] Road" << endl;
+        cout << "[5] Ball" << endl;
+        cout << "[6] Leg" << endl;
+        cout << "[7] Computer" << endl;
+        cout << "[8] Table" << endl;
+        cout << "[9] Desktop" << endl;
+        cout << "[10] Fire" << endl;
+        cout << "[11] Sun" << endl;
+        cout << "[12] Water" << endl;
+        cout << "[13] Earth" << endl;
+        cout << "[14] Air" << endl;
+        cout << "[15] Machine" << endl;
+        cout << "Enter the number word: ";
+        cin >> vor;
+        system("cls");
+
+        switch (vor)
+        {
+        case 1:
+            cout << "Перевод: Hello -> Привет";               
+            break;
+        case 2:
+            cout << "Перевод: World -> Мир";
+            break;
+        case 3:
+            cout << "Перевод: Word -> Слова";
+            break;
+        case 4:
+            cout << "Перевод: Road -> Дорога";
+            break;
+        case 5:
+            cout << "Перевод: Ball -> Мяч";
+            break;
+        case 6:
+            cout << "Перевод: Leg -> Нога";
+            break;
+        case 7:
+            cout << "Перевод: Computer -> Компьютер";
+            break;
+        case 8:
+            cout << "Перевод: Table -> Стол";
+            break;
+        case 9:
+            cout << "Перевод: Desktop -> Рабочий стол";
+            break;
+        case 10:
+            cout << "Перевод: Fire -> Огонь";
+            break;
+        case 11:
+            cout << "Перевод: Sun -> Солнце";
+            break;
+        case 12:;
+            cout << "Перевод: Water -> Вода";
+            break;
+        case 13:
+            cout << "Перевод: Earth -> Земля";
+            break;
+        case 14:
+            cout << "Перевод: Air -> Воздух";
+            break;
+        case 15:
+            cout << "Перевод: Machine -> Машина";
+        default:
+            cout << "Вы ввели некоректные значения, введите номер из списка!";
+            break;
+        }
+        break;
+    case 3:                                                        
+        cout << "Выход";
+        return 0;
+        break;
+
+    default:
+        cout << "Введите номер из квадратных скобочек";
+        break;
+
+        }
+        return 0;
+
+}
