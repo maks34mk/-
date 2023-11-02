@@ -1,0 +1,44 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+int num1;
+
+
+int main() {
+    setlocale(0, "");
+
+
+
+    // Устанавливаем зерно для генератора случайных чисел
+    srand(time(0));
+
+    // Размеры массивов
+    const int size = 2;
+
+    // Создаем два массива
+    int array1[size];
+    int array2[size];
+
+    // Заполняем массивы рандомными числами
+    for (int i = 0; i < size; ++i) {
+        array1[i] = rand();
+        array2[i] = rand();
+    }
+
+    // Выводим массивы
+    cout << "Массив 1:\n";
+    for (int i = 0; i < size; ++i) {
+        cout << array1[i] << " ";
+    }
+    cout << "\n";
+
+    cout << "Массив 2:\n";
+    for (int i = 0; i < size; ++i) {
+        cout << array2[i] << " ";
+    }
+    cout << "\n";
+
+
+
+}
