@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 // Функция для нахождения суммы цифр числа
-int findDigitSum(int number) {
+int findDigitSum(int number)
+{
     int sum = 0;
 
     // Находим сумму цифр числа
@@ -13,25 +14,20 @@ int findDigitSum(int number) {
     return sum;
 }
 
-// Функция для нахождения однозначного числа
-int findSingleDigitNumber(int number) {
-    // Пока число не однозначное, находим сумму цифр
-    while (number >= 10) {
-        number = findDigitSum(number);
-    }
 
-    return number;
-}
-
-int main() {
+int main()
+{
     setlocale(0, "");
     int n;
 
     cout << "Введите число n: ";
     cin >> n;
 
-    int result = findSingleDigitNumber(n);
-    cout << "Однозначное число: " << result << endl;
-
+    int result = n;
+    do
+    {
+         result = findDigitSum(result);
+        cout << "Однозначное число: " << result << endl;
+    } while (result >= 10);
     return 0;
 }
