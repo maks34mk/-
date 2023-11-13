@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+bool num3(int num) {
+    int num1 = sqrt(num);
+    return num1 * num1 == num;
+}
+
+void num2(int n) {
+    for (int num = 1; num <= n; num++) {
+        for (int i = 1; i <= sqrt(num); i++) {
+            int diff = num - i * i;
+            if (num3(diff)) {
+                cout << num << " = " << i << "^2 + " << sqrt(diff) << "^2" << endl;
+                break;
+            }
+        }
+    }
+}
+
+int main() {
+    int n;
+    setlocale(0, "");
+    cout << "Введите натуральное число n: ";
+    cin >> n;
+    cout << "Числа от 1 до " << n << ", представимые в виде суммы квадратов двух натуральных чисел:" << endl;
+    num2(n);
+    return 0;
+}
